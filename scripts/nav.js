@@ -53,7 +53,7 @@ const generateNavItems = () => {
         text: 'Sign up',
         title: 'Sign up',
         type: 'button',
-        class: 'btn btn-primary px-4 mx-1',
+        class: 'btn px-4 mx-1',
         icon: '',
       },
     ];
