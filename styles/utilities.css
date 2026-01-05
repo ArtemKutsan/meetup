@@ -845,6 +845,9 @@
 }
 
 /* ===== Text helpers ===== */
+.text-balance {
+  text-wrap: balance;
+}
 .text-left {
   text-align: left;
 }

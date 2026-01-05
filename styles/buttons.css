@@ -1,8 +1,8 @@
 /* ===== Base Button ===== */
 .btn {
   --btn-bg: var(--color-primary);
-  --btn-fg: var(--color-elevated);
-  --btn-hover-mix: var(--color-elevated) 10%;
+  --btn-fg: var(--color-light);
+  --btn-hover-mix: var(--color-bg) 10%;
   --btn-active-mix: var(--color-dark) 5%;
 
   display: inline-flex;
@@ -52,14 +52,14 @@
 /* ===== Variants ===== */
 .btn-primary {
   --btn-bg: var(--color-primary);
-  --btn-fg: var(--color-bg);
+  --btn-fg: var(--color-light);
   --btn-hover-mix: var(--color-bg) 10%;
   --btn-active-mix: var(--color-dark) 5%;
 }
 
 .btn-accent {
   --btn-bg: var(--color-accent);
-  --btn-fg: var(--color-bg);
+  --btn-fg: var(--color-light);
   --btn-hover-mix: var(--color-bg) 10%;
   --btn-active-mix: var(--color-dark) 5%;
 }
