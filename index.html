@@ -22,25 +22,25 @@
   <link href="./styles/styles.css" rel="stylesheet">
 </head>
 
-<body class="text-sm">
+<body class="text-base">
   <div class="base-layout">
 
     <!-- <div class="sidebar"></div> -->
 
     <header>
-      <div class="container flex items-center justify-between">
-        <h4 class="uppercase">
-          <a href="./index.html">
-            <img src="./assets/images/meetup-logo.svg" alt="Logo" class="h-8 inline-block">
+      <div class="content">
+        <div class="flex items-center justify-between w-full">
+          <a href="./index.html" class="inline-flex items-center">
+            <img src="./assets/images/meetup-logo.svg" alt="Logo">
           </a>
-        </h4>
-        <div class="flex items-center justify-end gap-1">
-          <nav>
-            <ul>
-            </ul>
-          </nav>
-          <button class="btn btn-ghost"><i class="bi bi-globe text-lg"></i></button>
-          <button id="theme-toggle" class="btn btn-ghost"></button>
+          <div class="flex items-center justify-end gap-1">
+            <nav>
+              <ul>
+              </ul>
+            </nav>
+            <button class="btn btn-ghost"><i class="bi bi-globe text-lg"></i></button>
+            <button id="theme-toggle" class="btn btn-ghost"></button>
+          </div>
         </div>
       </div>
     </header>
@@ -48,22 +48,43 @@
     <main>
       <div id="hero">
         <div id="hero-bg"></div>
-        <div class="container flex flex-col items-center justify-center">
-          <h1>Welcome to the Home page!</h1>
+        <div class="container content-center h-full">
+          <div class="content gap-5">
+            <div class="prose flex-1 flex flex-col justify-center">
+              <h1 class="text-balance">
+                The people platform — Where interests become friendships
+              </h1>
+              <p>
+                Whatever your interest, from hiking and reading to networking and skill sharing,
+                there are thousands of people who share it on Meetup. Events are happening
+                every day-sign up to join the fun.
+              </p>
+              <button class="btn px-4">Join Meetup</button>
+            </div>
+            <img src="./assets/images/hero-event.svg" class="flex-1" alt="The people platform — Where interests become friendships">
+          </div>
         </div>
       </div>
+
+      <!-- <section id="events-near">
+        <div class="container">
+          <div class="content">
+            <h4 class="title text-center">Events near you</h4>
+          </div>
+        </div>
+      </section> -->
     </main>
 
   </div>
 
-  <footer class="text-sm">
-    <div id="footer-content" class="container">
-      <div class="flex flex-col justify-between text-left gap-1">
+  <footer>
+    <div class="content flex justify-between">
+      <div class="flex flex-col text-left gap-1">
         <span class="font-semibold text-light">Meetup Project</span>
         <span>Designed & built by&nbsp;<a class="link nowrap" href="https://artemkutsan.pp.ua">Artem Kutsan</a></span>
         <span>&copy; Copyright 2026</span>
       </div>
-      <div class="flex flex-col justify-between text-right">
+      <div class="flex flex-col text-right">
         <span id="current-time" class="text-5xl font-bold text-light"></span>
         <span id="current-zone"></span>
       </div>
