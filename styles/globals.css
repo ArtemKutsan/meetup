@@ -336,6 +336,12 @@ h6 {
   line-height: 1.25;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 pre {
   white-space: pre-wrap;
   background-color: var(--color-bg-accent) !important;
