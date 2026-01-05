@@ -276,7 +276,7 @@ main {
 
 #hero {
   width: 100%;
-  height: calc(100dvh - 4.5rem);
+  min-height: calc(100dvh - 4.5rem);
   padding-bottom: 4.5rem;
 }
 
