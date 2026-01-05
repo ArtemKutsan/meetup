@@ -277,6 +277,7 @@ main {
 #hero {
   width: 100%;
   min-height: calc(100dvh - 4.5rem);
+  padding-top: 2rem;
   padding-bottom: 4.5rem;
 }
 
@@ -402,6 +403,12 @@ code {
 
   header nav {
     display: none;
+  }
+
+  #hero {
+    min-height: calc(100dvh - 4.5rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   form {
