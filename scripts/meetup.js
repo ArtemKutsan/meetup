@@ -140,6 +140,13 @@ function createEventElement(event) {
 
   el.innerHTML = `
     <img src="${image}" alt="${title}">
+    ${
+      type === 'online'
+        ? `<div class="badge"><span class="icon-cam text-muted"></span>
+           <span class="text-muted text-xs font-medium">Online Event</span></div>
+          `
+        : ''
+    }
     <h4>${title}</h4>
     <p class="font-medium text-sm text-muted my-2">${category} (${distance} km)</p>
     <div class="flex items-center gap-1">
@@ -151,8 +158,7 @@ function createEventElement(event) {
         attendees !== undefined
           ? `<div class="flex items-center gap-1">
                <span class="icon-check text-muted"></span><span>${attendees} going</span>
-             </div>
-            `
+             </div>`
           : ''
       }
       <div class="flex items-center gap-1">
