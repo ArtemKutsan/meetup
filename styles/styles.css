@@ -60,6 +60,7 @@ input[type='password']::placeholder {
 }
 
 /* ===== END ===== */
+
 .events {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -134,14 +135,28 @@ input[type='password']::placeholder {
   background-size: contain;
 }
 
+#join-meetup .content {
+  background-color: rgba(151, 202, 209, 0.08);
+  padding: 2rem 3.5rem;
+  border-radius: 0.5rem;
+}
+
 @media (max-width: 767px) {
-  #events {
+  #hero {
+    min-height: auto;
+  }
+
+  .events {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  #events {
+  .all-events-link {
+    display: none;
+  }
+
+  .events {
     grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -150,11 +150,12 @@ body {
   min-width: 320px;
   margin: 0 auto;
   transition: all 0.5s ease;
+  padding: 0 2rem;
 }
 
 .content {
   display: flex;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
 
 .content-center {
@@ -169,7 +170,7 @@ body {
 /* ===== Шапка ===== */
 header {
   grid-area: header;
-  padding: 1rem 0;
+  padding: 1rem;
   z-index: 9999;
   border-bottom: 0px solid var(--color-bg-accent);
 }
@@ -391,11 +392,15 @@ code {
 
 @media (max-width: 640px) {
   html {
-    font-size: 20px;
+    font-size: 12px;
+  }
+  .container {
+    padding: 0 1rem;
   }
 
   .content {
     flex-direction: column;
+    /* padding: 0 1rem; */
   }
 
   header nav {
@@ -414,16 +419,12 @@ code {
 }
 
 @media (max-width: 389px) {
-  html {
+  /* html {
     font-size: 18px;
-  }
+  } */
 }
 
 @media (max-width: 374px) {
-  .content {
-    padding: 0 1rem;
-  }
-
   section {
     padding: 1rem 0;
   }
