@@ -74,14 +74,14 @@ const eventsStore = [
     distance: 15,
   },
   {
-    title: 'All Nations - Manhattan Missions Church Bible Study',
-    description: 'Manhattan Bible Study Meetup Group',
-    date: new Date(2024, 2, 14, 11),
+    title: 'Book 40+ Appointments Per Month Using AI and Automation',
+    description: 'New Jersey Business Network',
+    date: new Date(2024, 2, 16, 14),
     image:
-      'https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    type: 'offline',
-    category: 'Health and Wellbeing',
-    distance: 15,
+      'https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    type: 'online',
+    category: 'Technology',
+    distance: 10,
   },
 ];
 
@@ -117,7 +117,8 @@ const filters = [
   },
 ];
 
-const eventsContainer = document.querySelector('#events');
+const eventsNearContainer = document.querySelector('#events-near .events');
+const onlineEventsContainer = document.querySelector('#online-events .events');
 
 function formatEventDate(date) {
   return new Intl.DateTimeFormat('en-US', {
@@ -164,10 +165,18 @@ function createEventElement(event) {
 }
 
 function renderEvents(events) {
-  eventsContainer.innerHTML = '';
+  eventsNearContainer.innerHTML = '';
+  onlineEventsContainer.innerHTML = '';
+
   events.forEach((event) => {
-    eventsContainer.appendChild(createEventElement(event));
+    eventsNearContainer.appendChild(createEventElement(event));
   });
+
+  events
+    .filter((event) => event.type === 'online')
+    .forEach((event) => {
+      onlineEventsContainer.appendChild(createEventElement(event));
+    });
 }
 
 renderEvents(eventsStore);
