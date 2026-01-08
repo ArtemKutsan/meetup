@@ -69,16 +69,14 @@
       </div>
 
       <section id="events-near">
-        <div class="container">
-          <div id="heading" class="content items-center w-full gap-5 mb-5">
-            <h3 class="nowrap">Events near you</h3>
-            <div class="flex items-center justify-between w-full gap-5">
-              <button class="btn btn-lg btn-primary-lite px-4">Mountain View, CA</button>
-              <a href="#" class="link">See all events</a>
-            </div>
+        <div class="container content flex-col">
+          <div id="heading" class="flex items-center w-full gap-5 mb-5">
+            <h3 class="nowrap">Events near</h3>
+            <button class="btn btn-lg btn-primary-lite px-4">Mountain View, CA</button>
+            <a href="#" class="all-events-link link ml-auto">See all events</a>
           </div>
 
-          <div class="events content gap-5">
+          <div class="events gap-5">
             <!-- Events рендерятся тут динамически -->
           </div>
         </div>
@@ -86,16 +84,27 @@
 
       <section id="online-events">
         <div class="container">
-          <div id="heading" class="content items-center w-full gap-5 mb-5">
-            <h3 class="nowrap">Upcoming online events</h3>
-            <div class="flex items-center justify-between w-full gap-5">
-              <button class="btn btn-lg btn-primary-lite px-4">Mountain View, CA</button>
-              <a href="#" class="link">See all events</a>
-            </div>
-          </div>
-
+          <h3 id="heading" class="content nowrap mb-5">Upcoming online events</h3>
           <div class="events content gap-5">
             <!-- Events рендерятся тут динамически -->
+          </div>
+        </div>
+      </section>
+
+      <section id="join-meetup">
+        <div class="container">
+          <div class="content gap-5">
+            <div class="prose flex flex-col justify-center">
+              <h1 class="text-balance">
+                Join Meetup
+              </h1>
+              <p>
+                People use Meetup to meet new people, learn new things, find support, get out of their
+                comfort zones, and pursue their passions, together. Membership is free.
+              </p>
+              <button class="btn btn-secondary px-10">Sign up</button>
+            </div>
+            <img src="./assets/images/join-meetup.svg" alt="Join Meetup">
           </div>
         </div>
       </section>
