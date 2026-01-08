@@ -159,5 +159,10 @@ input[type='password']::placeholder {
   .events {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  #join-meetup .content {
+    padding: 2rem 0;
+    border-radius: 0;
+  }
 }
 /* ===== Адаптив ===== */
