@@ -15,8 +15,9 @@
 
   <script src="./scripts/nav.js" defer></script>
   <script src="./scripts/timer.js" defer></script>
+  <script src="./scripts/meetup.js" defer></script>
 
-  <title>ICH WD</title>
+  <title>Meetup</title>
   <link rel="icon" href="./favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link href="./styles/styles.css" rel="stylesheet">
@@ -36,6 +37,7 @@
           <div class="flex items-center justify-end gap-1">
             <nav>
               <ul>
+                <!-- Навигация рендерится тут динамически -->
               </ul>
             </nav>
             <button class="btn btn-ghost"><i class="bi bi-globe text-lg"></i></button>
@@ -66,19 +68,27 @@
         </div>
       </div>
 
-      <!-- <section id="events-near">
+      <section id="events-near">
         <div class="container">
-          <div class="content">
-            <h4 class="title text-center">Events near you</h4>
+          <div id="heading" class="content items-center w-full gap-5 mb-5">
+            <h3 class="nowrap">Events near you</h3>
+            <div class="flex items-center justify-between w-full gap-5">
+              <button class="btn btn-lg btn-primary-lite px-4">Mountain View, CA</button>
+              <a href="#" class="link">See all events</a>
+            </div>
+          </div>
+
+          <div id="events" class="content gap-5">
+            <!-- Events рендерятся тут динамически -->
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
   </div>
 
   <footer>
-    <div class="content flex justify-between gap-5">
+    <div class="container content flex justify-between gap-5">
       <div class="flex flex-col text-left gap-1">
         <span class="font-semibold text-light">Meetup Project</span>
         <span>Designed & built by&nbsp;<a class="link nowrap" href="https://artemkutsan.pp.ua">Artem Kutsan</a></span>

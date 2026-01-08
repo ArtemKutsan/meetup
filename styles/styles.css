@@ -60,5 +60,65 @@ input[type='password']::placeholder {
 }
 
 /* ===== END ===== */
+#events {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.25rem;
+}
 
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 4.5rem;
+}
+.event img {
+  border-radius: 0.5rem;
+  max-height: 152px;
+}
+
+.icon-calendar {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  display: inline-block;
+  background-image: url('../assets/icons/calendar.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-check {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  display: inline-block;
+  background-image: url('../assets/icons/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-ticket {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  display: inline-block;
+  background-image: url('../assets/icons/ticket.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 767px) {
+  #events {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #events {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* ===== Адаптив ===== */
