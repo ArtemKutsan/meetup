@@ -1,4 +1,4 @@
-/* styles/globals.css */
+/* styles/globals.css */ /**/
 
 /* Размеры в px указаны для базового шрифта в 16px */
 :root {
@@ -25,6 +25,7 @@
   --color-bright: #fafafa;
   --color-deep: #1a1a1a;
   --color-primary-lite: #00798a1a;
+  --color-bg-primary-lite: #97cad114;
   --color-secondary-lite: #f640601a;
 }
 
@@ -170,7 +171,7 @@ body {
 /* ===== Шапка ===== */
 header {
   grid-area: header;
-  padding: 1rem;
+  padding: 1rem 2rem;
   z-index: 9999;
   border-bottom: 0px solid var(--color-bg-accent);
 }
@@ -288,7 +289,6 @@ section {
 footer {
   grid-area: footer;
   padding: 2rem 0;
-  text-align: center;
   background-color: var(--color-dark);
   color: #c5c5c5;
   /* border-top: 1px solid var(--color-bg-accent); */
@@ -394,17 +394,10 @@ code {
   html {
     font-size: 12px;
   }
-  .container {
-    padding: 0 1rem;
-  }
 
   .content {
     flex-direction: column;
     /* padding: 0 1rem; */
-  }
-
-  header nav {
-    display: none;
   }
 
   #hero {
@@ -418,10 +411,10 @@ code {
   }
 }
 
-@media (max-width: 389px) {
-  /* html {
-    font-size: 18px;
-  } */
+@media (max-width: 395px) {
+  header nav {
+    display: none;
+  }
 }
 
 @media (max-width: 374px) {

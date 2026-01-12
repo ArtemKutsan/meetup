@@ -14,8 +14,8 @@
   <!-- <script type="module" src="./scripts/log-to-page.js" defer></script> -->
 
   <script src="./scripts/nav.js" defer></script>
-  <script src="./scripts/timer.js" defer></script>
-  <script src="./scripts/meetup.js" defer></script>
+  <!-- <script src="./scripts/timer.js" defer></script> -->
+  <script type="module" src="./scripts/meetup.js" defer></script>
 
   <title>Meetup</title>
   <link rel="icon" href="./favicon.ico">
@@ -30,11 +30,42 @@
 
     <header>
       <div class="content">
-        <div class="flex items-center justify-between w-full">
-          <a href="./index.html" class="inline-flex items-center">
-            <img src="./assets/images/meetup-logo.svg" alt="Logo">
-          </a>
-          <div class="flex items-center justify-end gap-1">
+        <div class="header-grid">
+
+          <!-- LOGO -->
+          <div class="header-logo">
+            <a href="./index.html" class="inline-flex items-center">
+              <img src="./assets/images/meetup-logo.svg" alt="Logo">
+            </a>
+          </div>
+
+          <!-- SEARCH -->
+          <div class="header-search">
+            <div class="search-bar flex items-center justify-between bg-elevated rounded-lg gap-4 w-full ml-0">
+              <div class="flex items-center gap-2 flex-1 pl-3">
+                <svg class="text-muted" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 8.75C13.75 11.5114 11.5114 13.75 8.75 13.75C5.98857 13.75 3.75 11.5114 3.75 8.75C3.75 5.98857 5.98857 3.75 8.75 3.75C11.5114 3.75 13.75 5.98857 13.75 8.75ZM15 8.75C15 12.2017 12.2017 15 8.75 15C5.29822 15 2.5 12.2017 2.5 8.75C2.5 5.29822 5.29822 2.5 8.75 2.5C12.2017 2.5 15 5.29822 15 8.75ZM13.7247 14.6086L13.2973 14.1812C13.6173 13.9131 13.9131 13.6173 14.1812 13.2973L14.6086 13.7247L17.1086 16.2247C17.3527 16.4688 17.3527 16.8645 17.1086 17.1086C16.8645 17.3527 16.4688 17.3527 16.2247 17.1086L13.7247 14.6086Z" fill="currentColor"></path>
+                </svg>
+
+                <input type="text" placeholder="Search events" class="search-input flex-1 bg-transparent outline-none text-sm">
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-sm font-medium text-muted pl-3">
+                  Mountain View, CA
+                </span>
+
+                <button id="search-btn" class="btn btn-secondary flex items-center gap-1">
+                  <svg class="text-light" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 8.75C13.75 11.5114 11.5114 13.75 8.75 13.75C5.98857 13.75 3.75 11.5114 3.75 8.75C3.75 5.98857 5.98857 3.75 8.75 3.75C11.5114 3.75 13.75 5.98857 13.75 8.75ZM15 8.75C15 12.2017 12.2017 15 8.75 15C5.29822 15 2.5 12.2017 2.5 8.75C2.5 5.29822 5.29822 2.5 8.75 2.5C12.2017 2.5 15 5.29822 15 8.75ZM13.7247 14.6086L13.2973 14.1812C13.6173 13.9131 13.9131 13.6173 14.1812 13.2973L14.6086 13.7247L17.1086 16.2247C17.3527 16.4688 17.3527 16.8645 17.1086 17.1086C16.8645 17.3527 16.4688 17.3527 16.2247 17.1086L13.7247 14.6086Z" fill="currentColor"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTIONS (nav НЕ тронут) -->
+          <div class="header-actions flex items-center justify-end gap-1">
             <nav>
               <ul>
                 <!-- Навигация рендерится тут динамически -->
@@ -43,6 +74,7 @@
             <button class="btn btn-ghost"><i class="bi bi-globe text-lg"></i></button>
             <button id="theme-toggle" class="btn btn-ghost"></button>
           </div>
+
         </div>
       </div>
     </header>
@@ -61,7 +93,7 @@
                 there are thousands of people who share it on Meetup. Events are happening
                 every day-sign up to join the fun.
               </p>
-              <button class="btn px-4">Join Meetup</button>
+              <a href="./events-near.html" class="btn btn-primary px-4">Join Meetup</a>
             </div>
             <img src="./assets/images/hero-event.svg" class="flex-1" alt="The people platform — Where interests become friendships">
           </div>
@@ -70,7 +102,7 @@
 
       <section id="events-near">
         <div class="container content flex-col">
-          <div id="heading" class="flex items-center w-full gap-5 mb-5">
+          <div class="flex items-center w-full gap-5 mb-5">
             <h3 class="nowrap">Events near</h3>
             <button class="btn btn-lg btn-primary-lite px-4">Mountain View, CA</button>
             <a href="#" class="all-events-link link ml-auto">See all events</a>
@@ -84,7 +116,7 @@
 
       <section id="online-events">
         <div class="container">
-          <h3 id="heading" class="content nowrap mb-5">Upcoming online events</h3>
+          <h3 class="content nowrap mb-5">Upcoming online events</h3>
           <div class="events content gap-5">
             <!-- Events рендерятся тут динамически -->
           </div>
@@ -95,9 +127,9 @@
         <div class="container">
           <div class="content gap-5">
             <div class="prose flex flex-col justify-center">
-              <h1 class="text-balance">
+              <h3 class="text-balance">
                 Join Meetup
-              </h1>
+              </h3>
               <p>
                 People use Meetup to meet new people, learn new things, find support, get out of their
                 comfort zones, and pursue their passions, together. Membership is free.
@@ -108,20 +140,134 @@
           </div>
         </div>
       </section>
+
+      <section id="top-categories">
+        <div class="container">
+          <h3 class="content nowrap mb-5">Explore top categories</h3>
+          <div id="categories" class="content">
+            <!-- Categories рендерятся тут динамически -->
+          </div>
+        </div>
+      </section>
+
+      <section id="cities-on-meetup">
+        <div class="container">
+          <div class="content flex-col">
+            <h3 class="nowrap mb-5">Popular cities on Meetup</h3>
+            <p class="text-muted mb-5 max-w-prose">Meetup organizers are planning in cities around the country. Looking for fun things to do near you? See what Meetup organizers are planning in cities around the country.</p>
+            <div id="cities" class="content gap-5">
+              <!-- Cities рендерятся тут динамически -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-meetup-works">
+        <div class="container">
+          <h3 class="content nowrap mb-5">How Meetup works</h3>
+          <div class="content gap-5">
+            <div class="flex-1 bg-primary-lite p-10">
+              <div class="flex items-start gap-5 mb-5">
+                <i class="bi bi-search text-2xl text-primary"></i>
+                <h4 class="font-semibold">Discover events and groups</h4>
+              </div>
+              <p class="mb-5">Search events and groups hosting local events for all the things you love</p>
+              <a href="#" class="link">Search events and groups</a>
+            </div>
+            <div class="flex-1 bg-primary-lite p-10">
+              <div class="flex items-start gap-5 mb-5">
+                <i class="bi bi-plus-circle text-2xl text-primary"></i>
+                <h4 class="font-semibold">Start a group to host events</h4>
+              </div>
+              <p class="mb-5">Create your own Meetup group and draw from a community of millions</p>
+              <a href="#" class="link">Start a group</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="friendships-on-meetup">
+        <div class="container">
+          <h3 class="content nowrap mb-5">Friendships are made on Meetup</h3>
+          <p class="text-muted mb-5 max-w-prose">Since 2002, members have used Meetup to meet new friends, meet like-minded people, spend time on hobbies, and connect with locals over shared interests. Learn how.</p>
+          <div id="friendships" class="content gap-5">
+            <!-- Friendships рендерятся тут динамически -->
+          </div>
+        </div>
+      </section>
     </main>
 
   </div>
 
-  <footer>
-    <div class="container content flex justify-between gap-5">
-      <div class="flex flex-col text-left gap-1">
-        <span class="font-semibold text-light">Meetup Project</span>
-        <span>Designed & built by&nbsp;<a class="link nowrap" href="https://artemkutsan.pp.ua">Artem Kutsan</a></span>
-        <span>&copy; Copyright 2026</span>
+  <footer class="footer">
+    <div class="container">
+      <div class="heading flex items-center w-full gap-5 mb-8">
+        <h6 class="text-light nowrap">Create your Meetup group</h6>
+        <button class="btn btn-bordered btn-bordered-light px-4">Get started</button>
       </div>
-      <div class="flex flex-col text-right">
-        <span id="current-time" class="text-5xl font-bold text-light"></span>
-        <span id="current-zone"></span>
+      <hr />
+      <div class="footer-top content justify-between items-start mt-5">
+        <div class="footer-columns content gap-8 flex-1">
+          <div class="footer-column">
+            <h5 class="text-light font-semibold mb-2">Your Account</h5>
+            <ul class="footer-links">
+              <li><a href="#" class="link text-muted">Sign up</a></li>
+              <li><a href="#" class="link text-muted">Log in</a></li>
+              <li><a href="#" class="link text-muted">Help</a></li>
+              <li><a href="#" class="link text-muted">Become an affiliate</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="text-light font-semibold mb-2">Discover</h5>
+            <ul class="footer-links">
+              <li><a href="#" class="link text-muted">Groups</a></li>
+              <li><a href="#" class="link text-muted">Topics</a></li>
+              <li><a href="#" class="link text-muted">Calendar</a></li>
+              <li><a href="#" class="link text-muted">Online events</a></li>
+              <li><a href="#" class="link text-muted">Local guides</a></li>
+              <li><a href="#" class="link text-muted">Make friends</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="text-light font-semibold mb-2">Meetup</h5>
+            <ul class="footer-links">
+              <li><a href="#" class="link text-muted">About</a></li>
+              <li><a href="#" class="link text-muted">Blog</a></li>
+              <li><a href="#" class="link text-muted">Meetup Pro</a></li>
+              <li><a href="#" class="link text-muted">Careers</a></li>
+              <li><a href="#" class="link text-muted">Podcast</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-middle content justify-between items-center gap-4 pt-6 pb-6">
+        <div class="social-links flex items-center gap-4">
+          <a href="#" class="link text-muted"><img src="./assets/icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+          <a href="#" class="link text-muted"><img src="./assets/icons/twitter.svg" alt="Twitter" class="social-icon"></a>
+          <a href="#" class="link text-muted"><img src="./assets/icons/youtube.svg" alt="Youtube" class="social-icon"></a>
+          <a href="#" class="link text-muted"><img src="./assets/icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+          <a href="#" class="link text-muted"><img src="./assets/icons/tiktok.svg" alt="TikTok" class="social-icon"></a>
+        </div>
+        <div class="app-stores flex items-center gap-2">
+          <a href="#" class="app-store-btn">
+            <img src="./assets/icons/app-store.svg" alt="Download on the App Store" class="app-icon">
+          </a>
+          <a href="#" class="app-store-btn">
+            <img src="./assets/icons/google-play.svg" alt="Get it on Google Play" class="app-icon">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom content items-center text-xs pt-4 gap-4">
+        <span class="text-light">&copy; 2026 Meetup</span>
+        <div class="footer-bottom-links flex items-center gap-2">
+          <a href="#" class="link text-muted">Terms of Service</a>
+          <a href="#" class="link text-muted">Privacy Policy</a>
+          <a href="#" class="link text-muted">Do not sell or share my personal data</a>
+          <a href="#" class="link text-muted">Cookie Policy</a>
+          <a href="#" class="link text-muted">Help</a>
+        </div>
       </div>
     </div>
   </footer>

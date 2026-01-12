@@ -1026,6 +1026,9 @@
 .bg-lite {
   background-color: var(--color-bg-accent);
 }
+.bg-primary-lite {
+  background-color: var(--color-bg-primary-lite);
+}
 .bg-bright {
   background-color: var(--color-bright);
 }

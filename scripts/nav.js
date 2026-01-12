@@ -46,14 +46,14 @@ const generateNavItems = () => {
         title: 'Open Authorization',
         href: `${baseHref}auth`,
         type: 'link',
-        class: 'mx-1',
+        class: 'mx-1 nowrap',
         icon: '',
       },
       {
         text: 'Sign up',
         title: 'Sign up',
         type: 'button',
-        class: 'btn px-4 mx-1',
+        class: 'btn px-4 mx-1 nowrap',
         icon: '',
       },
     ];

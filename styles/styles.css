@@ -1,18 +1,54 @@
-/* styles/styles.css */
-
+/* ===== Base imports ===== */
 @import url('globals.css');
 @import url('fonts.css');
 @import url('utilities.css');
 @import url('buttons.css');
 @import url('prose.css');
 
-/* ===== START ===== */
+/* ===== Links ===== */
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header layout ===== */
+.header-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'logo search actions';
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.header-logo {
+  grid-area: logo;
+}
+
+.header-search {
+  grid-area: search;
+  min-width: 0;
+}
+
+.header-actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ====== Forms ===== */
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* min-width: calc(320px - 4rem); */
 }
+
 form.hidden {
   display: none;
 }
@@ -20,6 +56,7 @@ form.hidden {
 label {
   position: relative;
 }
+
 label > .required-star {
   position: absolute;
   right: 0.75rem;
@@ -32,35 +69,40 @@ input[type='tel'],
 input[type='password'] {
   padding: 0.5rem 2.5rem 0.5rem 1rem;
   min-height: 2.5rem;
-  border: 0px solid var(--color-bg-accent);
-  border-radius: 0.875rem;
+  border: 0;
   outline: none;
-  color: var(--color-text);
-  background: var(--color-elevated);
-  margin-bottom: 0.5rem;
   width: 100%;
+  background: var(--color-elevated);
+  color: var(--color-text);
   font-size: var(--font-sm);
   font-family: inherit;
   font-feature-settings: inherit;
 }
-input[type='text']::placeholder,
-input[type='email']::placeholder,
-input[type='tel']::placeholder,
-input[type='password']::placeholder {
+
+input::placeholder {
   color: var(--color-text-muted);
 }
 
-.link {
-  color: var(--color-link);
-  text-decoration: none;
-  font-weight: 500;
-}
-.link:hover {
-  text-decoration: underline;
+/* ===== Search bar ===== */
+.search-bar {
+  border: 1px solid var(--color-bg-accent);
+  border-radius: 0.5rem;
+  min-height: 2.5rem;
+  overflow: hidden;
+  max-width: 590px;
+  margin-right: auto;
+  background-color: var(--color-bg);
 }
 
-/* ===== END ===== */
+.search-input::placeholder {
+  color: var(--color-text-muted);
+}
 
+#search-btn {
+  border-radius: 0;
+}
+
+/* ====== Events grid ====== */
 .events {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -72,97 +114,382 @@ input[type='password']::placeholder {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 2rem;
 }
+
 .event img {
-  border-radius: 0.5rem;
   width: 100%;
   height: 152px;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
+
 .event .badge {
-  display: flex;
-  gap: 0.25rem;
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  background-color: var(--color-bg);
+  display: flex;
+  gap: 0.25rem;
   padding: 0.25rem 0.5rem;
+  background-color: var(--color-bg);
   border-radius: 0.25rem;
 }
 
-.icon-calendar {
-  width: 1.25rem;
-  height: 1.25rem;
-  vertical-align: top;
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#map img {
+  width: 350px;
+  height: 285px;
+  border-radius: 0.75rem;
+}
+
+/* ===== Events filters (events-near page) ===== */
+select {
+  border: 0;
+  border-radius: 9999px;
+  padding: 0 2.5rem 0 1rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-bg-lite);
+  color: var(--color-accent);
+  appearance: none;
+  background-image: url('/assets/icons/arrow-drop-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  cursor: pointer;
+}
+
+#filters-container {
+  position: relative;
+  min-height: 3.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+#events-filters #filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Events list inside filters page */
+#events-filters .events {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+#events-filters .event {
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #c5c5c5;
+}
+
+#events-filters .event img {
+  max-width: 160px;
+  max-height: 100px;
+}
+
+#events-filters .event-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#events-filters .event-info h4 {
+  order: -1;
+}
+
+#events-filters .event-info .time-date {
+  order: -2;
+  margin-bottom: 0.25rem;
+}
+
+#events-filters .event .badge {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+
+/* ===== Event metadata ===== */
+.time-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.attendees,
+.ticket {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+}
+
+.online-indicator {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+/* ===== Icons ===== */
+.icon-calendar,
+.icon-check,
+.icon-ticket,
+.icon-cam {
   display: inline-block;
-  background-image: url('../assets/icons/calendar.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.icon-check {
-  width: 1.25rem;
-  height: 1.25rem;
-  vertical-align: top;
-  display: inline-block;
-  background-image: url('../assets/icons/check.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
+.icon-calendar,
+.icon-check,
 .icon-ticket {
   width: 1.25rem;
   height: 1.25rem;
-  vertical-align: top;
-  display: inline-block;
-  background-image: url('../assets/icons/ticket.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .icon-cam {
   width: 1rem;
   height: 1rem;
-  vertical-align: top;
-  display: inline-block;
-  background-image: url('../assets/icons/cam.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
-#join-meetup .content {
-  background-color: rgba(151, 202, 209, 0.08);
-  padding: 2rem 3.5rem;
+.icon-calendar {
+  background-image: url('../assets/icons/calendar.svg');
+}
+.icon-check {
+  background-image: url('../assets/icons/check.svg');
+}
+.icon-ticket {
+  background-image: url('../assets/icons/ticket.svg');
+}
+.icon-cam {
+  background-image: url('../assets/icons/cam.svg');
+}
+
+/* ===== Categories ===== */
+#categories {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-primary-lite);
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  transform: translateY(-0.25rem);
+}
+
+.category-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Cities ===== */
+#cities {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.city img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  aspect-ratio: 1 / 1;
+}
+
+/* ===== Friendships ===== */
+#friendships {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.friendship {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.friendship img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 0.5rem;
 }
 
-@media (max-width: 767px) {
-  #hero {
-    min-height: auto;
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--color-dark);
+  /* color: var(--color-text-inverse); */
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-bg-accent);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.footer-links a,
+.footer-bottom-links a {
+  color: var(--color-text-lite);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1023px) {
+  #map {
+    display: none;
   }
 
   .events {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  #categories,
+  #cities {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
+  #hero {
+    min-height: 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .header-grid {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'logo actions'
+      'search search';
+    row-gap: 0.75rem;
+  }
+
+  .search-bar {
+    max-width: none;
+    margin-right: 0;
+  }
+
   .all-events-link {
     display: none;
   }
 
   .events {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #join-meetup .content {
-    padding: 2rem 0;
-    border-radius: 0;
+  .event .badge {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin-top: 0.25rem;
+  }
+
+  .event .ticket {
+    display: none;
+  }
+
+  #friendships {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom-links {
+    display: none;
   }
 }
-/* ===== Адаптив ===== */
+
+@media (max-width: 640px) {
+  .events {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .event {
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #c5c5c5;
+  }
+
+  .event img {
+    max-width: 100px;
+    max-height: 60px;
+  }
+
+  .event-info h4 {
+    order: -1;
+  }
+
+  .event-info .time-date {
+    order: -2;
+    margin-bottom: 0.25rem;
+  }
+
+  #categories,
+  #cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #friendships {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 1.5rem 0;
+  }
+}
