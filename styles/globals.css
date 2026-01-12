@@ -265,7 +265,7 @@ main {
   top: 0;
   left: 0;
 
-  background: linear-gradient(to bottom right, #f640602a, var(--color-primary-lite), transparent);
+  background: linear-gradient(to bottom right, #f640601a, var(--color-primary-lite), transparent);
 
   -webkit-mask-image: linear-gradient(to bottom, var(--color-bg), transparent 100%);
   mask-image: linear-gradient(to bottom, var(--color-bg), transparent 100%);

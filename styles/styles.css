@@ -142,9 +142,10 @@ input::placeholder {
 }
 
 #map img {
-  width: 350px;
+  width: 100%;
   height: 285px;
   border-radius: 0.75rem;
+  object-fit: cover;
 }
 
 /* ===== Events filters (events-near page) ===== */
@@ -283,6 +284,13 @@ select {
 }
 .icon-cam {
   background-image: url('../assets/icons/cam.svg');
+}
+
+/* ===== Join Meetup Section ===== */
+#join-meetup .content {
+  background-color: var(--color-bg-primary-lite);
+  padding: 2rem 3.5rem;
+  border-radius: 0.5rem;
 }
 
 /* ===== Categories ===== */
@@ -478,6 +486,15 @@ select {
   .event-info .time-date {
     order: -2;
     margin-bottom: 0.25rem;
+  }
+
+  #join-meetup .container {
+    padding: 0;
+  }
+  #join-meetup .content {
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0;
   }
 
   #categories,
