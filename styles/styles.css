@@ -259,7 +259,9 @@ select option {
 .icon-calendar,
 .icon-check,
 .icon-ticket,
-.icon-cam {
+.icon-cam,
+.icon-plus,
+.icon-search {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
@@ -278,6 +280,16 @@ select option {
   height: 1rem;
 }
 
+.icon-plus {
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon-search {
+  width: 4rem;
+  height: 4rem;
+}
+
 .icon-calendar {
   background-image: url('../assets/icons/calendar.svg');
 }
@@ -289,6 +301,12 @@ select option {
 }
 .icon-cam {
   background-image: url('../assets/icons/cam.svg');
+}
+.icon-search {
+  background-image: url('../assets/icons/search-bold.svg');
+}
+.icon-plus {
+  background-image: url('../assets/icons/plus-bold.svg');
 }
 
 /* ===== Join Meetup Section ===== */
