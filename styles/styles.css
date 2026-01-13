@@ -437,11 +437,12 @@ select option {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #hero {
     min-height: 0;
   }
-
+}
+@media (max-width: 767px) {
   .container {
     padding: 0 2rem;
   }
