@@ -50,19 +50,19 @@ export const friendshipsStore = [
     title: 'I Used Meetup to Make Friends at Lunch',
     description:
       'New Jersey-based writer and college student homestead. Learn how she used Meetups to her joining a Girls Night Out Meetup group.',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop',
+    image: '../assets/images/first-article.webp',
   },
   {
     title: 'How to Turn Casual Connections into Close Friendships',
     description:
       "It's proven that friendships are harder to make as an adult. But don't sweat it. We've got tips that will help you simplify the process.",
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+    image: '../assets/images/second-article.webp',
   },
   {
     title: 'Do You Have the "Right" Number of Friends?',
     description:
       'People from around the world have tried to help answer this question. Learn about the three types of friendship and how to fulfill them.',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=300&fit=crop',
+    image: '../assets/images/third-article.webp',
   },
 ];
 
