@@ -404,7 +404,7 @@ select option {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1023px) {
+@media (max-width: 1215px) {
   #map {
     display: none;
   }
