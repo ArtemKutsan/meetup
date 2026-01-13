@@ -28,14 +28,14 @@ const generateNavItems = () => {
         title: 'Open Profile',
         href: `${baseHref}auth/profile.html`,
         type: 'link',
-        class: 'btn btn-ghost mx-1',
+        class: 'btn btn-ghost btn-sm mx-1',
         icon: '<i class="bi bi-person-fill text-lg"></i>',
       },
       {
         text: '',
         title: 'Log out',
         type: 'button',
-        class: 'logout btn btn-ghost mx-1',
+        class: 'logout btn btn-ghost btn-sm mx-1',
         icon: '<i class="bi bi-box-arrow-right text-lg"></i>',
       },
     ];
@@ -53,7 +53,7 @@ const generateNavItems = () => {
         text: 'Sign up',
         title: 'Sign up',
         type: 'button',
-        class: 'btn px-4 mx-1 nowrap',
+        class: 'btn btn-sm px-4 mx-1 nowrap',
         icon: '',
       },
     ];
