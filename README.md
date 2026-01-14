@@ -1,4 +1,4 @@
-# **Meetup Project**
+# Meetup Project
 
 Проект демонстрирует:
 
@@ -12,10 +12,12 @@
 ![Скриншот 2](./assets/images/screenshots/screenshot-2.png)
 ![Скриншот 3](./assets/images/screenshots/screenshot-3.png)
 ![Скриншот 4](./assets/images/screenshots/screenshot-4.png)
+![Скриншот 5](./assets/images/screenshots/screenshot-5.png)
+![Скриншот 6](./assets/images/screenshots/screenshot-6.png)
 
 ---
 
-# **Основные возможности**
+# Основные возможности
 
 ## Поиск событий
 
@@ -64,7 +66,7 @@
 
 ---
 
-# **Архитектура проекта**
+# Архитектура проекта
 
 ## Структура файлов
 
@@ -125,7 +127,7 @@ events-near.html
 
 ---
 
-# **UI и стилизация**
+# UI и стилизация
 
 ## Принципы
 
@@ -143,7 +145,7 @@ events-near.html
 
 ## Содержит также дополнительные брейкпоинты для некоторых элементов
 
-# **Технологии**
+# Технологии
 
 - **HTML5**
 - **CSS3** (Grid, Flexbox, CSS Variables)
