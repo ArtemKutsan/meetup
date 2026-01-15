@@ -47,7 +47,7 @@ Hero-блок на главной странице динамически под
 
 **Hero секция**
 
-[Скриншот 6](./assets/images/screenshots/screenshot-6.png)
+![Скриншот 6](./assets/images/screenshots/screenshot-6.png)
 
 ---
 
