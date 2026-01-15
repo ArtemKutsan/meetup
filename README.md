@@ -8,12 +8,21 @@
 - тёмную/светлую тему,
 - кастомные UI‑элементы (фильтры, карточки событий, поиск),
 
+**Общий вид главной страницы**
 ![Скриншот 1](./assets/images/screenshots/screenshot-1.png)
+
+**Общий вид страницы фильтров событий**
 ![Скриншот 2](./assets/images/screenshots/screenshot-2.png)
+
+**Мобильный вид страниц**
 ![Скриншот 3](./assets/images/screenshots/screenshot-3.png)
 ![Скриншот 4](./assets/images/screenshots/screenshot-4.png)
+
+**Категории и города**
 ![Скриншот 5](./assets/images/screenshots/screenshot-5.png)
-![Скриншот 6](./assets/images/screenshots/screenshot-6.png)
+
+**Hero секция**
+[Скриншот 6](./assets/images/screenshots/screenshot-6.png)
 
 ---
 
@@ -21,7 +30,7 @@
 
 ## Поиск событий
 
-- Удобная строка поиска
+- Строка поиска
 - Адаптивный layout
 - Поддержка тёмной темы
 
@@ -36,6 +45,8 @@
 
 ## Категории
 
+![Категории](./assets/images/screenshots/Categories.png)
+
 - Грид из 8 категорий
 - Иконки SVG
 - Hover‑эффекты
@@ -43,11 +54,15 @@
 
 ## Популярные города
 
+![Города](./assets/images/screenshots/Cities.png)
+
 - Грид из 5 городов
 - Круглые изображения
 - Адаптивная сетка
 
 ## Карточки блога
+
+![Карточки блога](./assets/images/screenshots/Blog.png)
 
 - Карточки с изображениями
 - Текстовые описания
@@ -124,6 +139,18 @@ events-near.html
 - рендер фильтров,
 - применение фильтров,
 - рендер списка событий near.
+
+## nav.js
+
+Отвечает за:
+
+- рендер основноо меню навигации сайта.
+
+## theme-toggle.js
+
+Отвечает за:
+
+- переключение светлой/темной темы
 
 ---
 
