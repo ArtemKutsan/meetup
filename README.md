@@ -211,6 +211,7 @@ themeToggleBtn.addEventListener('click', () => {
       .querySelector('html')
       .setAttribute('data-theme', localStorage.getItem('theme') || 'light');
   </script>
+  <script type="module" src="./scripts/theme-toggle.js" defer></script>
 </head>
 ```
 
@@ -232,6 +233,40 @@ themeToggleBtn.addEventListener('click', () => {
 - 640px — перестройка хедера, мобильный layout событий (картинка слева, текст справа)
 
 * Содержит также дополнительные брейкпоинты для более тонкой настройки некоторых элементов
+
+Пример адаптивности секции `<header>`
+
+```css
+.header-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'logo search actions';
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .header-grid {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'logo actions'
+      'search search';
+    row-gap: 0.75rem;
+  }
+}
+```
+
+Пример перестановки flex-элементов секции `.event-info`
+
+```css
+@media (max-width: 767px) {
+  .event-info .time-date {
+    order: -1;
+    margin-bottom: 0.25rem;
+  }
+}
+```
 
 # Технологии
 
