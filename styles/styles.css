@@ -422,7 +422,7 @@ select option {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1215px) {
+@media (max-width: 1255px) {
   #map {
     display: none;
   }
