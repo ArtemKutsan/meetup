@@ -1,4 +1,4 @@
-# Meetup Project
+# [Meetup Project](https://artemkutsan.github.io/meetup/index.html)
 
 ## Введение
 
