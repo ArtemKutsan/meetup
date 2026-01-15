@@ -26,7 +26,7 @@ const generateNavItems = () => {
       {
         text: '',
         title: 'Open Profile',
-        href: `${baseHref}auth/profile.html`,
+        href: '#', // `${baseHref}auth/profile.html`,
         type: 'link',
         class: 'btn btn-ghost btn-sm mx-1',
         icon: '<i class="bi bi-person-fill text-lg"></i>',
@@ -44,7 +44,7 @@ const generateNavItems = () => {
       {
         text: 'Log in',
         title: 'Open Authorization',
-        href: `${baseHref}auth`,
+        href: '#', // `${baseHref}auth`,
         type: 'link',
         class: 'mx-1 nowrap',
         icon: '',
