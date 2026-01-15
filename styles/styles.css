@@ -156,7 +156,8 @@ input::placeholder {
 
 /* ===== Events filters (events-near page) ===== */
 select {
-  border: 0;
+  border: 1px solid transparent;
+  outline: none;
   border-radius: 9999px;
   padding: 0 2.5rem 0 1rem;
   min-height: 2.5rem;
@@ -171,6 +172,10 @@ select {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   cursor: pointer;
+}
+
+select:focus {
+  border: 1px solid var(--color-bg-accent);
 }
 
 select option {
@@ -428,8 +433,8 @@ select option {
 }
 
 /* ===== Responsive ===== */
-/* default 1255, для демонстрации 1215 */
-@media (max-width: 1215px) {
+/* default 1255, для демонстрации и правильного отображения в edge 1195 */
+@media (max-width: 1195px) {
   #map {
     display: none;
   }
