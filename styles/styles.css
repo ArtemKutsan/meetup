@@ -167,9 +167,9 @@ select {
   background-color: var(--color-bg-lite);
   color: var(--color-accent);
   appearance: none;
-  background-image: url('/assets/icons/arrow-drop-down.svg');
+  background-image: url('../assets/icons/arrow-down.svg');
   background-repeat: no-repeat;
-  background-position: right 0.25rem center;
+  background-position: right 1rem center;
   cursor: pointer;
 }
 
