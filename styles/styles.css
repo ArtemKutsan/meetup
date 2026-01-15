@@ -422,7 +422,8 @@ select option {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1255px) {
+/* default 1255, для демонстрации 1215 */
+@media (max-width: 1215px) {
   #map {
     display: none;
   }
