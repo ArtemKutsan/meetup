@@ -9,19 +9,24 @@
 - кастомные UI‑элементы (фильтры, карточки событий, поиск),
 
 **Общий вид главной страницы**
+
 ![Скриншот 1](./assets/images/screenshots/screenshot-1.png)
 
 **Общий вид страницы фильтров событий**
+
 ![Скриншот 2](./assets/images/screenshots/screenshot-2.png)
 
 **Мобильный вид страниц**
+
 ![Скриншот 3](./assets/images/screenshots/screenshot-3.png)
 ![Скриншот 4](./assets/images/screenshots/screenshot-4.png)
 
 **Категории и города**
+
 ![Скриншот 5](./assets/images/screenshots/screenshot-5.png)
 
 **Hero секция**
+
 [Скриншот 6](./assets/images/screenshots/screenshot-6.png)
 
 ---
